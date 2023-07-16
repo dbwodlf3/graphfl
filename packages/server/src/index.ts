@@ -11,13 +11,13 @@ interface EdgeFunction {
     (message: FunctionCallMessage): FunctionResultMessage;
 };
 
-interface HTTPRequest {
+interface HttpRequest {
 
-}
+};
 
 interface HttpResponse {
 
-}
+};
 
 const _functions: any = {}
 
@@ -27,7 +27,7 @@ const FunctionManager = {
         if(this.functions[functionId]) throw new Error(`already registerd function ${functionId}`);
         this.functions[functionId] = callback;
     },
-    endpointFunction(functionId: string, args: any){
+    callFunction(functionId: string, args?: any){
         return this.functions[functionId](args);
     },
 };

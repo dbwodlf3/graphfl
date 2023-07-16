@@ -1,5 +1,5 @@
-import { createFunctionManager } from "../../../../../packages/server/src";
-import { helloWorld } from "./module/guest/guest.function";
+import { createFunctionManager } from "../../../../../../packages/server/src";
+import { helloWorld } from "../module/guest/guest.function";
 
 export const FunctionManager = (()=>{
     const fm = createFunctionManager();

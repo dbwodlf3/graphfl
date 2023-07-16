@@ -1,4 +1,4 @@
-# Graphfl
+# GraphFL
 
 The term URI is a very general concept. However, as an endpoint in the web, URIs can be traditionally viewed from two perspectives.
 
