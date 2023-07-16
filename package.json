@@ -1,0 +1,28 @@
+{
+  "name": "graphfl",
+  "version": "1.0.0",
+  "description": "A rcpful api library and utils for serverless",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dbwodlf3/graphfl.git"
+  },
+  "keywords": [
+    "serverless",
+    "node",
+    "rpcful"
+  ],
+  "author": "cogi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dbwodlf3/graphfl/issues"
+  },
+  "homepage": "https://github.com/dbwodlf3/graphfl#readme",
+  "devDependencies": {
+    "eslint": "^8.45.0",
+    "prettier": "^3.0.0"
+  }
+}
