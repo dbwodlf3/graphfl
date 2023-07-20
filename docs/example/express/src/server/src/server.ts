@@ -12,7 +12,7 @@ app.get("/", (req, res)=> {
 app.post("/api/graphfl", bodyParser.json(), async (req, res)=>{
     const functionId = req.body.functionId;
     const functionArgs = req.body.args; 
-    const result = await FunctionManager.endpointFunction(functionId, functionArgs);
+    const result = await FunctionManager.callFunction(functionId, functionArgs);
     res.json(result);
     return;
 });
