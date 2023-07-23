@@ -1,14 +1,17 @@
-const Confiug:any = {};
+import {createWebClient, Config as _Config} from "../../../../../../packages/web-client/src/index"
+import {GuestFunctions} from "../../rpc/guest/guest.ft";
+import {UserFunctions} from "../../rpc/user/user.ft";
+interface GraphFLConfig {
+    endpoint?: string
+}
 
-/** Get accessible functions from server or config */
-const serverFunctions = {};
+const config = Object.assign({}, _Config);
 
-/** Create client */
-const serverConnection:any = {};
+config.endpoint = "localhost:8888";
 
-const guest:any = {}
+const guest_client = createWebClient<GuestFunctions>();
+const user_client = createWebClient<UserFunctions>();
 
-// Call functions
-guest.helloWorld().then((data:any)=>{
-    console.log(data);
-});
+console.log(guest_client);
+guest_client.helloWorld();
+// user_client.getUserProfile("userJwt");

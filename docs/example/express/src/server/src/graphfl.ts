@@ -1,4 +1,4 @@
-import { createFunctionManager } from "../../../../../../packages/server/src";
+import { createFunctionManager } from "../../../../../../packages/server/src/manager";
 import { helloWorld } from "../module/guest/guest.function";
 
 export const FunctionManager = (()=>{

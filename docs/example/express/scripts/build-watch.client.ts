@@ -1,5 +1,5 @@
 import path from "path";
-import { spawn } from "child_process"
+import { spawn, exec } from "child_process"
 import common from "./common";
 
 const srcPath = path.join(common.clientRoot, "src");
@@ -12,7 +12,7 @@ else {
     NODE_PATH = `${common.clientRoot}:${srcPath}`;
 }
 
-spawn(`cd ${common.clientRoot} && \
-    tsc --watch '${common.clientRoot}/src/client.ts' -outFile ${common.projectRoot}/static/index.js`, 
+const childProcess = spawn(`cd ${common.clientRoot} && \
+    npx rollup -c ${common.clientRoot}/rollup.config.js -w`, 
     { shell: true, stdio: 'inherit', env: { NODE_PATH: NODE_PATH, ...process.env } }
 );

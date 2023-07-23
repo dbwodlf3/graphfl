@@ -1,4 +1,4 @@
-import { createFunctionManager } from "../../src/index";
+import { createFunctionManager } from "manager";
 
 describe("GraphFL Test", ()=>{
     describe("Function Manager", ()=>{
@@ -15,6 +15,12 @@ describe("GraphFL Test", ()=>{
             FunctionManager.callFunction(functionId);
 
             expect(testFunction).toBeCalled();
-        })
+        });
+
+        test.skip("Have to support streaming function", ()=>{});
+
+        test.skip("Have to support call chaining", ()=>{});
+
+        test.skip("Have to support service acrrosing call chaining", ()=>{});
     })
 });
